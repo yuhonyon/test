@@ -1,0 +1,53 @@
+.evaluation {
+  .record {
+    &:after {
+      @include clearfix();
+    }
+    .list {
+      border-bottom: 1px solid $blueColor;
+      float: left;
+      width: 50%;
+      .link {
+        display: block;
+        text-align: center;
+        border-right: 1px solid $blueColor;
+        box-sizing: border-box;
+        padding: 0.28rem;
+        &:nth-of-type(2n) {
+          border-right: none;
+        }
+        .number {
+          color: $blueColor;
+          font-weight: bold;
+          font-size: 0.39rem;
+          @include text-overflow();
+        }
+        .title {
+          font-size: 0.39rem;
+          color: #939393;
+          @include text-overflow();
+        }
+      }
+    }
+  }
+  .grade {
+    padding-top: 1.25rem;
+    .title {
+      text-align: center;
+      @include text-overflow();
+      font-size: 0.50rem;
+      color: #939393;
+    }
+    .circle {
+      width: 7.85rem;
+      height: 7.85rem;
+      background: url(../images/circle_bg.png) 0 0 no-repeat;
+      background-size: 100%;
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
