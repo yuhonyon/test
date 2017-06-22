@@ -1,0 +1,196 @@
+/******************************************************/
+.fuel1_list{
+	overflow: hidden;
+	zoom:1;
+}
+.fuel1_list li{
+	float: left;
+	box-sizing:border-box;
+	width: 50%;
+	border-right:1px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;
+	padding: 0.8rem 0 0.8rem 1rem;
+}
+.fuel1_list li.cpai{
+	width: 100%;
+	border-right: none;
+	padding-left: 1rem;
+}
+.fuel1_list li div{
+	padding-left: 3rem;
+}
+.fuel1_list li.cpai div{
+	padding-left: 4rem;
+}
+.fuel1_list .licheng div{
+	background: url(../images/licheng.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .licheng1 div{
+	background: url(../images/licheng1.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .chesu div{
+	background: url(../images/chesu.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .fchesu div{
+	background: url(../images/fchesu.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .chesu1 div{
+	background: url(../images/chesu1.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .chengben div{
+	background: url(../images/chengben.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .huafei div{
+	background: url(../images/huafei.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .cpai div{
+	background: url(../images/cpai.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+	height: 2.7rem;
+	line-height: 2.7rem;
+}
+.fuel1_list .cpai1 div{
+	background: url(../images/cpai.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .pilao div{
+	background: url(../images/pilao.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .youpin div{
+	background: url(../images/youpin.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .youfei div{
+	background: url(../images/youfei.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .youhao div{
+	background: url(../images/youhao.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .youmen div{
+	background: url(../images/youmen.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .shache div{
+	background: url(../images/shache.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .chaosu div{
+	background: url(../images/chaosu.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .jingyan div{
+	background: url(../images/jingyan.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list .reche div{
+	background: url(../images/reche.png) 0 0 no-repeat;
+	background-size: 2.8667rem 2.6667rem;
+}
+.fuel1_list li div span{
+	color: #939393;
+	font-size: 1.1em;
+}
+.fuel1_list li.cpai div span{
+	font-size: 1.25rem;
+}
+.fuel1_list li div var{
+	color: #50c0e9;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: bold;
+}
+.fuel1_list li.cpai div var{
+	color: #50c0e9;
+	font-size: 1.7rem;
+}
+.fuel1_list .youpin div var{
+	text-decoration: underline;
+}
+.fuel1_list li div em{
+	color: #939393;
+	font-size: 0.7667rem;
+	font-style: normal;
+}
+.fuel1_list li.cpai div em{
+	color: #939393;
+	font-size: 1rem;
+}
+.people h3{
+	color: #939393;
+	font-weight: bold;
+	font-size: 1.15rem;
+	text-align: center;
+	line-height: 3.89rem;
+	font-family: "MicroSoft YaHei";
+}
+.people{
+	height: 11rem;
+	background: url(../images/details_good.png) center 3.556rem no-repeat #fff;
+	background-size: 75%;
+}
+.details_good .people{
+	background: url(../images/details_good.png) center 3.556rem no-repeat #fff;
+	background-size: 75%;
+}
+.details_bad .people{
+	background: url(../images/details_bad.png) center 3.556rem no-repeat #fff;
+	background-size: 75%;
+}
+.details_best .people{
+	background: url(../images/details_best.png) center 3.556rem no-repeat #fff;
+	background-size: 75%;
+}
+.details_so .people{
+	background: url(../images/details_so.png) center 3.556rem no-repeat #fff;
+	background-size: 75%;
+}
+.details_terrible .people{
+	background: url(../images/details_terrible.png) center 3.556rem no-repeat #fff;
+	background-size: 75%;
+}
+.fuel1_data{
+	text-align: center;
+	background-color: #50c0e9;
+	padding: 0.5rem 0;
+	line-height: 1.8rem;
+}
+.details_good .fuel1_data{
+	background-color: #50c0e9;
+}
+.details_best .fuel1_data{
+	background-color: #a8d324;
+}
+.details_bad .fuel1_data{
+	background-color: #ffc641;
+}
+.details_so .fuel1_data{
+	background-color: #858585;
+}
+.details_terrible .fuel1_data{
+	background-color: #ff5f5f;
+}
+.fuel1_data p{
+	color: #fff;
+	font-size: 1rem;
+}
+.fuel1_data strong{
+	font-size: 1.2rem;
+	color: #fff;
+}
+
+.map{
+	width: 100%;
+	height: 10rem;
+	overflow: hidden;
+}
+/******************************************************/

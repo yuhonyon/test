@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>车智汇</title>
+	<meta name="keywords" content="" >
+	<meta name="description" content="" >
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/com.css">
+	<link rel="stylesheet" href="css/oil_expert.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+			<div class="chezhihui">
+				<strong>车智汇</strong>
+				<p>1亿车主的共同选择</p>
+			</div>
+			<a href="javascript:testApp('czhapp://doc/openwith')" class="open chezhihui_link">直接打开</a>
+		</div>
+		<div class="con">	
+			<div class="people people_ping"><!-- 如果我胜出了，加class="people_win",如果不是我胜出，加class="people_beat",如果是平局，加class="people_ping" -->
+				<h3>Tira的油耗分析</h3>
+			</div>
+			<div class="grade_top">
+				<div class="grade_sel">
+					<select name="" id="" disabled="false">
+						<optgroup label="油耗分析">
+							<option value="">最近7天油耗分析</option>
+							<option value="">最近1天油耗分析</option>
+							<option value="">油耗汇总分析</option>
+						</optgroup>
+					</select>
+					<p>7月5日~7月15日</p>
+				</div>
+				<ul>
+					<li>
+						<p>7天总里程</p>
+						<p>
+							<span>260</span>
+							<var>公里</var>
+						</p>
+					</li>
+					<li>
+						<p>总花费</p>
+						<p>
+							<span>260</span>
+							<var>元</var>
+						</p>
+					</li>
+					<li>
+						<p>成本</p>
+						<p>
+							<span>0.8</span>
+							<var>元/公里</var>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="fuel_pk"><!-- 谁赢谁下面的class="fuel_win"显示,如果是平局则都不显示-->
+				<div class="pk_my">
+					<span>我的平均油耗</span><br/>
+					<var class="fuel_blue">16.2</var><br/>
+					<em>升/百公里</em>
+					<div class="fuel_win" style="display:block;"></div>
+				</div>
+				<div class="pk_pk">PK</div>
+				<div class="pk_other">
+					<span>同车型车主</span><br/>
+					<var>6.2</var><br/>
+					<em>升/百公里</em>
+					<div class="fuel_win"></div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="chezhihui">
+					<strong>关注公众号，获取最新优惠</strong>
+					<p>查找公众号时请搜索“车智汇”</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="dTc_bg"></div>
+	<div class="dTc_android">
+		<ul>
+			<li class="step_1">1. 点击右上角“立即打开”按钮</li>
+			<li class="step_2">2.在菜单中点击<br/>&emsp;<a href="javascript:void(0);">在浏览器中打开</a></li>
+		</ul>
+	</div>
+	<div class="dTc_iphone">
+		<ul>
+			<li class="step_1">1. 点击右上角“立即打开”按钮</li>
+			<li class="step_2">2.在菜单中点击<br/>&emsp;<a href="javascript:void(0);">在 safari 中打开</a></li>
+		</ul>
+	</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/device.min.js"></script>
+<script src="js/head.js"></script>
+<script>
+	$(function(){
+		$(".grade_top ul li:last").css("background","none");
+	})
+</script>
+</html>

@@ -1,0 +1,145 @@
+.people h3{
+	color: #939393;
+	font-weight: bold;
+	font-size: 1.15rem;
+	text-align: center;
+	line-height: 3.89rem;
+	font-family: "MicroSoft YaHei";
+}
+.people{
+	height: 11rem;
+	background: url(../images/oil_bg.png) center 3.556rem no-repeat #fff;
+	background-size: 60%;
+	border-bottom: 1px solid #ccc;
+}
+.people_win{
+	background: url(../images/oil_bg.png) center 3.556rem no-repeat #fff;
+	background-size: 60%;
+}
+.people_beat{
+	background: url(../images/oil_bg1.png) center 3.556rem no-repeat #fff;
+	background-size: 60%;
+}
+.people_ping{
+	background: url(../images/oil_ping.png) center 3.556rem no-repeat #fff;
+	background-size: 60%;
+}
+.grade_top{
+	padding: 1rem 5.56% 0;
+	border-bottom: 1px solid #c5c5c5;
+}
+.grade_top ul{
+	overflow: hidden;
+	zoom:1;
+	padding-top: 0.5rem;
+	padding-bottom:1rem;
+	
+}
+.grade_top ul li{
+	text-align: center;
+	float: left;
+	width: 33.3%;
+	background: url(../images/cline.png) right 0 no-repeat;
+	background-size: 1px 100%;
+}
+.grade_top ul li p{
+	color: #939393;
+	font-size: 0.9333rem;
+}
+.grade_top ul li p span{
+	color: #50c0e9;
+	font-size: 1.5rem;
+}
+.grade_top ul li p var{
+	color: #939393;
+	font-size: 0.8667rem;
+	font-style: normal;
+}
+.grade_top .grade_sel{
+	text-align: center;
+}
+.grade_sel select{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	background-color: #f5f5f5;
+	font-size: 1.2rem;
+	color: #50c0e9;
+	padding: 0 0.5rem;
+	border-bottom: 1px solid #939393;
+	background: url(../images/line_down.png) right bottom no-repeat;
+	background-size: 0.6389rem 1.472rem;
+}
+.grade_sel select optgroup{
+	color: #fff;
+	background-color: #000;
+}
+.grade_sel select optgroup option{
+	color: #000;
+}
+.grade_sel p{
+	color: #939393;
+	line-height: 1.4rem;
+}
+.fuel_pk{
+	overflow: hidden;
+	zoom:1;
+	padding: 1rem 8.3% 2rem;
+}
+.fuel_pk div{
+	float: left;
+}
+.pk_my,.pk_other{
+	padding: 0.5rem 0;
+	text-align: center;
+	width: 36%;
+	border: 1px solid #d1d1d1;
+	border-radius: 5px;
+	box-sizing:border-box;
+	position: relative;
+}
+.fuel_pk div span{
+	color: #939393;
+	font-size: 1rem;
+}
+.fuel_pk div em{
+	color: #939393;
+	font-size: 0.7333rem;
+	font-style: normal;
+}
+.fuel_pk div var{
+	font-style: normal;
+	color: #939393;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.fuel_pk div var.fuel_red{
+	color: #ff5f5f;
+}
+.fuel_pk div var.fuel_blue{
+	color: #50c0e9;
+
+}
+.pk_pk{
+	padding-top: 0.7rem;
+	width: 28%;
+	text-align: center;
+	font-size: 2rem;
+	color: #c4c4c4;
+	font-weight: bold;
+}
+.fuel_win{
+	position: absolute;
+	width: 4.2rem;
+	height: 2.8667rem;
+	background: url(../images/icon_win.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	top:2.3333rem;
+	display: none;
+}
+.pk_my .fuel_win{
+	right: -2.3rem;
+}
+.pk_other .fuel_win{
+	left:-2.3rem;
+}

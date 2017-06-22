@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>车智汇</title>
+	<meta name="keywords" content="" >
+	<meta name="description" content="" >
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/com.css">
+	<link rel="stylesheet" href="css/fuel_note.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+			<div class="chezhihui">
+				<strong>车智汇</strong>
+				<p>1亿车主的共同选择</p>
+			</div>
+			<a href="javascript:testApp('czhapp://doc/openwith')" class="chezhihui_link open">直接打开</a>
+		</div>
+		<div class="con details_terrible"><!-- 如果驾驶成绩较好，加class="details_good", 如果驾驶成绩较差，加class="details_bad",如果驾驶成绩极佳，加class="details_best",如果驾驶成绩一般，加class="details_so",如果驾驶成绩糟糕，加class="details_terrible"-->
+			<div class="people">
+				<h3>Tira的驾驶成绩</h3>
+			</div>
+			<div class="fuel1_data">
+				<p>12-14 18:25~18:31  全程约5分钟</p>
+				<strong>总评 良好</strong>
+			</div>
+			<div class="map">
+				<img src="images/map.jpg" alt="">
+			</div>
+			<ul class="fuel1_list">
+				<li class="licheng">
+					<div>
+						<span>里程</span><br/>
+						<var>20</var>
+						<em>公里</em>
+					</div>
+				</li>
+				<li class="youhao">
+					<div>
+						<span>平均油耗</span><br/>
+						<var>21.05</var>
+						<em>L/100km</em>
+					</div>
+				</li>
+				<li class="chesu">
+					<div>
+						<span>平均车速</span><br/>
+						<var>82</var>
+						<em>公里/小时</em>
+					</div>
+				</li>
+				<li class="fchesu">
+					<div>
+						<span>最快车速</span><br/>
+						<var>82</var>
+						<em>公里/小时</em>
+					</div>
+				</li>
+				<li class="youmen">
+					<div>
+						<span>急踩油门</span><br/>
+						<var>1</var>
+						<em>次</em>
+					</div>
+				</li>
+				<li class="shache">
+					<div>
+						<span>急踩刹车</span><br/>
+						<var>0</var>
+						<em>次</em>
+					</div>
+				</li>
+				<li class="pilao">
+					<div>
+						<span>疲劳驾驶</span><br/>
+						<var>20</var>
+						<em>分钟</em>
+					</div>
+				</li>
+				<li class="chaosu">
+					<div>
+						<span>超速</span><br/>
+						<var>20</var>
+						<em>km/h</em>
+					</div>
+				</li>
+				
+				<li class="reche">
+					<div>
+						<span>起步热车</span><br/>
+						<var>995</var>
+						<em>秒</em>
+					</div>
+				</li>
+				<li class="jingyan">
+					<div>
+						<span>经验值</span><br/>
+						<var>-5</var>
+						<!-- <em>千克</em> -->
+					</div>
+				</li>
+				<li class="youpin">
+					<div>
+						<span>油品</span><br/>
+						<var>-5</var>
+						<em>#</em>
+					</div>
+				</li>
+				<li class="youfei">
+					<div>
+						<span>油费</span><br/>
+						<var>-5</var>
+						<em>元</em>
+					</div>
+				</li>
+				<li class="cpai">
+					<div>
+						<span>碳排放</span>&emsp;&emsp;
+						<var>-5</var>
+						<em>千克</em>
+					</div>
+				</li>
+			</ul>
+			<div class="footer">
+				<div class="chezhihui">
+					<strong>关注公众号，获取最新优惠</strong>
+					<p>查找公众号时请搜索“车智汇”</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dTc_bg"></div>
+	<div class="dTc_android">
+		<ul>
+			<li class="step_1">1. 点击右上角“立即打开”按钮</li>
+			<li class="step_2">2.在菜单中点击<br/>&emsp;<a href="javascript:void(0);">在浏览器中打开</a></li>
+		</ul>
+	</div>
+	<div class="dTc_iphone">
+		<ul>
+			<li class="step_1">1. 点击右上角“立即打开”按钮</li>
+			<li class="step_2">2.在菜单中点击<br/>&emsp;<a href="javascript:void(0);">在 safari 中打开</a></li>
+		</ul>
+	</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/device.min.js"></script>
+<script src="js/head.js"></script>
+<script>
+	$(function(){
+		$(".fuel1_list li:odd").css("borderRight","0");
+	})
+</script>
+</html>

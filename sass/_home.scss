@@ -1,0 +1,57 @@
+.home {
+  top: 0;
+  .condition {
+    &:after {
+      @include clearfix();
+    }
+    .list {
+      float: left;
+      width: 50%;
+      .link {
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        .circle {
+          position: absolute;
+          border-radius: 50%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .control{
+    &:after {
+      @include clearfix();
+    }
+    .list {
+      float: left;
+      width: 50%;
+      .link {
+        display: block;
+      }
+    }
+  }
+  .entry {
+    &:after {
+      @include clearfix();
+    }
+    .list {
+      float: left;
+      width: 33.3%;
+      &:nth-of-type(3){
+        width: 33.4%;
+      }
+      .link {
+        display: block;
+        text-align: center;
+        .img {
+          display: block;
+          margin: 0 auto;
+        }
+        .text {
+          @include text-overflow();
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.maintain {
+  .article {
+    .list {
+      .link {
+        display: block;
+        &:after {
+          @include clearfix();
+        }
+        .img {
+          float: left;
+        }
+        .text {
+          
+        }
+      }
+    }
+  }
+}

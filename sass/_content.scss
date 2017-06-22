@@ -1,0 +1,9 @@
+.content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: $headerHeight;
+  bottom: 0;
+  background-color: $bgColor;
+  @include scroll();
+}

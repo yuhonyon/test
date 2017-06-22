@@ -1,0 +1,69 @@
+/*********************************************************/
+.people{
+	height: 13.5rem;
+	background-size: 12.67rem;
+}
+.people h3{
+	color: #939393;
+	font-weight: bold;
+	font-size: 1.15rem;
+	text-align: center;
+	line-height: 3.89rem;
+	font-family: "MicroSoft YaHei";
+}
+.get_medal{
+	text-align: center;
+	line-height: 3.91rem;
+	height: 3.91rem;
+	color: #939393;
+	font-size: 1.149rem;
+	font-family: "MicroSoft YaHei";
+}
+.record_detail{
+	overflow: hidden;
+	padding-bottom: 0.5rem;
+}
+.record_detail div{
+	float: left;
+	text-align: center;
+	overflow: hidden;
+	width: 33.33%;
+}
+.record_detail div img{
+	width: 4.06rem;
+}
+.record_detail div p{
+	font-size: 1.11rem;
+	color: #333;
+	line-height: 1.5rem;
+}
+.record_detail div span{
+	font-size: 0.889rem;
+	color: #939393;
+	padding:0 0.3rem;
+	display: inline-block;
+	line-height: 1.2rem;
+}
+.people_medal{
+	background: #fff;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.record_kind img{
+	width: 11.37rem;
+}
+.record_kind p{
+	color: #333;
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1.6rem;
+}
+.get_if{
+	text-align: center;
+	font-size: 0.89rem;
+	color: #939393;
+	line-height: 2rem;
+}
+
+
+/*********************************************************/

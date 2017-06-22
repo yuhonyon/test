@@ -1,0 +1,18 @@
+.header {
+  position: absolute;
+  left: 0;
+  height: $headerHeight;
+  line-height: $headerHeight;
+  top: 0;
+  width: 100%;
+  .title {
+    text-align: center;
+    @include text-overflow();
+  }
+  .back {
+    float: left;
+  }
+  .action {
+
+  }
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>车智汇</title>
+	<meta name="keywords" content="" >
+	<meta name="description" content="" >
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/com.css">
+	<link rel="stylesheet" href="css/evaluate.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+			<div class="chezhihui">
+				<strong>车智汇</strong>
+				<p>1亿车主的共同选择</p>
+			</div>
+			<a href="javascript:testApp('czhapp://doc/openwith')" class="open">直接打开</a>
+		</div>
+		<div class="con details_terrible" id="con"><!-- 如果驾驶成绩较好，加class="details_good", 如果驾驶成绩较差，加class="details_bad",如果驾驶成绩极佳，加class="details_best",如果驾驶成绩一般，加class="details_so",如果驾驶成绩糟糕，加class="details_terrible"-->
+			<div class="people">
+				<h3>Tira的驾驶成绩</h3>
+			</div>
+			<div class="car_score">
+				<h3>最近7天的驾驶成绩</h3>
+				<div class="car_details">
+					<a href="javascript:void(0);" class="car_details1">					
+						<var style="left:0;top:0;">起步热车<br/><span>34</span>秒</var>	
+						<strong></strong>
+					</a>
+					<a href="javascript:void(0);" class="car_details2">		
+						<var style="right:0;top:0;">原地怠速<br/><span>8</span>%</var>
+						<strong></strong>	
+					</a>
+					<a href="javascript:void(0);" class="car_details3">						
+						<var style="left:0;bottom:0;">急踩油门<br/><span>21</span>次/十公里</var>
+						<strong></strong>
+					</a>
+					<a href="javascript:void(0);" class="car_details4">						
+						<var style="right:0;bottom:0;">急踩刹车<br/><span>34</span>次/十公里</var>
+						<strong></strong>
+					</a>
+					<div class="car_result">
+						<span>总评</span><br/>
+						<var>一般</var>
+					</div>
+				</div>
+				<div class="canvas">
+					<canvas width="400" height="400" id="canvas"></canvas>
+				</div>
+			</div>
+			<div class="person_medal">
+				<div class="people_medal people" style="border-bottom:0;background:#fff;">
+					<h3>荣誉勋章</h3>
+					<!-- <img src="images/badge2.png" alt="" class="medal_type"> -->
+					<div class="medal_kind">
+						<img src="images/medal1.png" alt="">
+						<p>车神降世</p>
+					</div>
+				</div>
+				<h3 class="get_medal" style="background-color:#fff;">共获得&nbsp;<span>13</span>&nbsp;个</h3>
+			</div>
+			<div class="person_record">
+				<div class="people_medal people" style="border-bottom:0;background:#fff;">
+					<h3>个人记录</h3>
+					<div class="record_kind">
+						<div>
+							<img src="images/record_1.png" alt="">
+							<p>最快车速</p>
+						</div>
+					</div>
+				</div>
+				<h3 class="get_medal" style="background-color:#fff;">共打破记录&nbsp;<span>13</span>&nbsp;次</h3>
+			</div>
+			<div class="footer">
+				<div class="chezhihui">
+					<strong>关注公众号，获取最新优惠</strong>
+					<p>查找公众号时请搜索“车智汇”</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="dTc_bg"></div>
+	<div class="dTc_android">
+		<ul>
+			<li class="step_1">1. 点击右上角“立即打开”按钮</li>
+			<li class="step_2">2.在菜单中点击<br/>&emsp;<a href="javascript:void(0);">在浏览器中打开</a></li>
+		</ul>
+	</div>
+	<div class="dTc_iphone">
+		<ul>
+			<li class="step_1">1. 点击右上角“立即打开”按钮</li>
+			<li class="step_2">2.在菜单中点击<br/>&emsp;<a href="javascript:void(0);">在 safari 中打开</a></li>
+		</ul>
+	</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/device.min.js"></script>
+<script src="js/head.js"></script>
+<script>
+		window.onload=function(){
+			
+			var canvas=document.getElementById("canvas");
+			var ctx=canvas.getContext("2d");
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+
+			//右上、左上、左下、右下->原地怠速、起步热车、急踩油门、急踩刹车
+			var aColor=["red","green","orange","red"];//颜色
+			var rank=[5,5,5,5];//层数
+			var txt=["一般","很好","糟糕","很好"];//每一项测评结果
+			
+			function circle(r,startAngel,endAngel,oColor,grade){
+				ctx.beginPath();
+				ctx.arc(200,200,r,startAngel,endAngel,false);
+				ctx.lineWidth=20;
+				ctx.strokeStyle=oColor;
+				ctx.stroke();							
+			}
+		
+			function donghua(startAngel,endAngel,oColor,grade,obj,txt){
+				var num=0;
+				var timer=setInterval(function(){
+					circle(85+num,startAngel,endAngel,oColor);
+					num+=22;
+					if(grade*22==num){
+						clearInterval(timer);
+						$(obj).html(txt);
+						$(obj).css("color",oColor);
+					}
+					
+				},150)
+			}
+			//右下
+			donghua(Math.PI*5/180,Math.PI*85/180,aColor[3],rank[3],".car_details4 strong",txt[3]);
+			//左下
+			donghua(Math.PI*95/180,Math.PI*175/180,aColor[2],rank[2],".car_details3 strong",txt[2]);
+			//左上
+			donghua(Math.PI*185/180,Math.PI*265/180,aColor[1],rank[1],".car_details1 strong",txt[1]);
+			//右上
+			donghua(Math.PI*275/180,Math.PI*355/180,aColor[0],rank[0],".car_details2 strong",txt[0]);			
+			
+		}
+	</script>
+</html>

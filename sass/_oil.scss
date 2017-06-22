@@ -1,0 +1,111 @@
+.oil {
+  .analyse {
+    .date {
+      text-align: center;
+      padding-top: 0.42rem;
+      .sel {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-size: 0.50rem;
+        color: $blueColor;
+        border-bottom: 1px solid $borderColor;
+        padding: 0 0.28rem;
+      }
+      .range {
+        font-size: 0.42rem;
+        line-height: 2;
+        color: $grayColor;
+      }
+    }
+    .detail {
+      @include text-overflow();
+      border-bottom: 1px solid $borderColor;
+      padding: 0.35rem 0;
+      .every {
+        text-align: center;
+        float: left;
+        width: 33.3%;
+        font-size: 0.36rem;
+        color: $grayColor;
+        line-height: 1.5;
+        position: relative;
+        &:not(:last-of-type):after {
+          content: '';
+          width: 1px;
+          height: 60%;
+          top: 20%;
+          background-color: $grayColor;
+          right: 0;
+          overflow: hidden;
+          position: absolute;
+        }
+        p {
+          @include text-overflow();
+        }
+        .title {
+          font-size: 0.36rem;
+        }
+        .number {
+          color: $blueColor;
+          font-size: 0.61rem;
+        }
+        .unit {
+          font-style: normal;
+        }
+      }
+    }
+  }
+  .pk {
+    text-align: center;
+    padding: 0.69rem;
+    &:after {
+      @include clearfix();
+    }
+    .my, .other {
+      border: 1px solid $borderColor;
+      border-radius: 5px;
+      box-sizing: border-box;
+      width: 36%;
+      position: relative;
+      color: $grayColor;
+      float: left;
+      padding: 0.2rem 0;
+      .consume {
+        font-size: 0.44rem;
+        line-height: 1.4;
+        @include text-overflow();
+      }
+      .number {
+        font-size: 0.78rem;
+        line-height: 1.4;
+        @include text-overflow();
+        &.blue {
+          color: $blueColor;
+        }
+        &.black {
+          color: $blackColor;
+        }
+      }
+      .unit {
+        font-size: 0.33rem;
+        line-height: 1.4;
+        @include text-overflow();
+      }
+    }
+    .my {
+    }
+    .other {
+
+    }
+    .pk_pk {
+      width: 28%;
+      float: left;
+      font-weight: bold;
+      color: #ccc;
+      font-size: 0.78rem;
+      line-height: 3;
+    }
+
+  }
+}

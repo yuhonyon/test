@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<title>电瓶监控</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/jar.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+    	<div class="jar">
+    		<div class="jar_status bad"><!-- 如果健康加health，如果亏电加bad -->
+    			<p class="status">
+    				<span>亏电</span>
+    			</p>
+    			<p class="volt">当前电压：<span>12.1V</span></p>
+    			<p class="updatetime">（更新于2015-3-4 23:00）</p>
+    		</div>
+    		<div class="note">
+    			<span>电瓶异常提醒</span>
+    			<a href="javascript:void(0);" class="opennote"></a>
+    		</div>
+    		<div class="chart">
+    			<h3>最近停车电压变化（V）</h3>
+    			<canvas width="200px" height="100px"></canvas>
+    		</div>
+    		<div class="feedback">
+    			<a href="javascript:void(0);">结果不对？一键反馈！</a>
+    		</div>
+    	</div>
+    </div>
+</body>
+<script src="js/jquery1.8.3.min.js" type="text/javascript"></script>
+<script src="js/fastclick.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/Chart.js?daad" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(".note a").click(function(){
+    if($(this).hasClass("closenote")){
+        $(this).removeClass().addClass("opennote");
+    }else{
+        $(this).removeClass().addClass("closenote");
+    }
+})
+
+//最近停车电压变化图表
+var canvas=document.getElementsByTagName("canvas")[0];
+var ctx=canvas.getContext('2d');
+var dataset=[59.57,77,88,59.57,77,90,57];
+var labelset=[];
+var length=dataset.length;
+for(var i=0;i<dataset.length;i++){
+    labelset.push("12:12:12");
+}
+if(length>1){
+    var data = {
+        labels: labelset,
+        datasets: [{
+            label: '',
+            fillColor: "rgba(0,0,0,0)",
+            strokeColor: "#4fc1e6",
+            pointColor: "#4fc1e6",
+            pointStrokeColor: "#4fc1e6",
+            data: dataset
+        }]
+
+    }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    window.myChart = new Chart(ctx).Line(data, {
+        "responsive": true,
+        "bezierCurve": false,
+        "showTooltips":false,
+        onAnimationComplete:function(){
+            for(var i=0;i<dataset.length;i++){
+                var points=myChart.datasets[0].points[i];
+                ctx.font = "12px Arial";
+                // 设置对齐方式    
+                if(i==0){
+                    ctx.textAlign="left";
+                }else if(i==dataset.length-1){
+                    ctx.textAlign="right";
+                }else{
+                    ctx.textAlign ="center";
+                }
+                // 设置填充颜色 
+                ctx.fillStyle = "#50c0e9";
+                // 设置字体内容，以及在画布上的位置
+                ctx.fillText(points.value,points.x, points.y-12);
+            }
+        }
+
+    });
+    
+
+}else{
+    dataset.push(dataset[0],dataset[0]);
+    labelset=[];
+    for(var i=0;i<dataset.length;i++){
+        labelset.push("");
+    }
+    var data = {
+        labels: labelset,
+        datasets: [{
+            label: '',
+            fillColor: "rgba(0,0,0,0)",
+            strokeColor: "rgba(0,0,0,0)",
+            pointColor: "rgba(0,0,0,0)",
+            pointStrokeColor: "rgba(0,0,0,0)",
+            data: dataset
+        }]
+
+    }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    window.myChart = new Chart(ctx).Line(data, {
+        "responsive": true,
+        "bezierCurve": false,
+        "showTooltips":false,
+        "animationSteps":10,
+        onAnimationComplete:function(){
+            var points=myChart.datasets[0].points[1];
+            ctx.font = "12px Arial";
+            // 设置对齐方式  
+            ctx.textAlign ="center";    
+            // 设置填充颜色 
+            ctx.fillStyle = "#50c0e9";
+            // 设置字体内容，以及在画布上的位置
+            ctx.fillText(points.value,points.x, points.y-12);
+            ctx.beginPath();
+            ctx.arc(points.x,points.y,5,0,2*Math.PI,false);
+            ctx.fillStyle = "#4fc1e6"; 
+            ctx.fill();
+        }
+
+    });
+   
+}
+
+</script>
+</html>

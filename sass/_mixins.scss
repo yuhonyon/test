@@ -1,0 +1,30 @@
+@mixin clearfix() {
+  content: '';
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+@mixin text-overflow {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin button($width, $height, $bgColor, $color, $fontSize, $borderRadius) {
+  width: $width;
+  height: $height;
+  line-height: $height;
+  background-color: $bgColor;
+  color: $color;
+  font-size: $fontSize;
+  border-radius: $borderRadius;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+@mixin scroll() {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
