@@ -1,33 +1,149 @@
 .home {
   top: 0;
+  background-color: #fff;
+  color: $color;
   .condition {
-    &:after {
-      @include clearfix();
-    }
     .list {
-      float: left;
-      width: 50%;
       .link {
         display: block;
         box-sizing: border-box;
         position: relative;
+        padding: 0.42rem 0 0 2rem;
         .circle {
           position: absolute;
-          border-radius: 50%;
+          border-radius: 0.7rem;
+          border: 1px solid $borderColor;
           text-align: center;
+          width: 1.25rem;
+          height: 1.25rem;
+          left: 0.42rem;
+          top: 0.42rem;
+          color: #343434;
+          font-size: 0.39rem;
+          line-height: 1.25rem;
+          &.good {
+            border-color: $goodColor;
+          }
+          &.best {
+            border-color: $bestColor;
+          }
+          &.terrible {
+            border-color: $terribleColor;
+          }
+          &.so {
+            border-color: $soColor;
+          }
+          &.bad {
+            border-color: $badColor;
+          }
         }
+        .explain {
+          border-bottom: 1px solid $borderColor;
+          padding-bottom: 0.42rem;
+          padding-right: 0.42rem;
+          background: url(../images/to.png) right center no-repeat;
+          background-size: 0.19rem 0.36rem;
+          background-origin: content-box;
+          .title {
+            font-size: 0.44rem;
+            color: #000;
+            line-height: 0.7rem;
+            @include text-overflow();
+          }
+          .details {
+            font-size: 0.39rem;
+            line-height: 0.55rem;
+            color: #939393;
+            @include text-overflow();
+          }
+        }
+      }
+      &:last-of-type {
+        .link {
+          border-bottom: 1px solid $borderColor;
+          .explain {
+            border-bottom: none;
+          }
+        }
+
+      }
+    }
+  }
+  .path {
+    .link {
+      display: block;
+      border-bottom: 1px solid $borderColor;
+      padding: 0.42rem;
+      background: url(../images/to.png) right center no-repeat;
+      background-size: 0.19rem 0.36rem;
+      background-origin: content-box;
+    }
+    .title {
+      color: #000;
+      font-size: 0.44rem;
+      line-height: 1.8;
+    }
+    .time, .place {
+      font-size: 0.39rem;
+      color: #939393;
+      line-height: 1.8;
+      @include text-overflow();
+    }
+    .details {
+      @include text-overflow();
+      .distance, .duration, .oil {
+        font-size: 0.39rem;
+        color: #939393;
+        padding-left: 0.69rem;
+        display: inline-block;
+        line-height: 2;
+        background-size: 0.54rem 0.54rem;
+        background-position: left center;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+      }
+      .distance {
+        background-image: url(../images/distance.png);
+      }
+      .duration {
+        background-image: url(../images/duration.png);
+      }
+      .oil {
+        background-image: url(../images/oil.png);
       }
     }
   }
   .control{
+    border-bottom: 1px solid $borderColor;
     &:after {
       @include clearfix();
     }
     .list {
       float: left;
       width: 50%;
+      &:nth-of-type(2n) {
+        .link {
+          border-right: none;
+        }
+      }
       .link {
         display: block;
+        border-right: 1px solid $borderColor;
+        text-align: center;
+        box-sizing: border-box;
+        vertical-align: middle;
+        padding: 0.69rem 0.42rem;
+        .img {
+          width: 0.67rem;
+          height: 0.94rem;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+        .text {
+          color: $color;
+          font-size: 0.44rem;
+          line-height: 0.94rem;
+        }
       }
     }
   }
@@ -44,12 +160,18 @@
       .link {
         display: block;
         text-align: center;
+        padding: 0.3rem;
         .img {
           display: block;
           margin: 0 auto;
+          width: 1.43rem;
+          height: 1.43rem;
         }
         .text {
           @include text-overflow();
+          font-size: 0.39rem;
+          color: $color;
+          line-height: 2;
         }
       }
     }
