@@ -8,6 +8,9 @@
   width:100%;
   position: relative;
 }
+.exam-car{
+  position: relative;
+}
 .exam-mark{
   position: absolute;
   bottom:0;
@@ -42,6 +45,7 @@
     span{
         display: block;
         margin :0 auto;
+        min-height: .65rem;
       background: url(../images/sprite.png) no-repeat;
       background-size: $spritesheet-width  $spritesheet-height;
 
@@ -86,6 +90,18 @@
       @include sprite($icon4);
     }
   }
+}
+
+.exam-text{
+  height:3rem;
+  overflow: hidden;
+  position: relative;
+}
+.exam-text-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 }
