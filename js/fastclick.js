@@ -1,4 +1,4 @@
-;(function () {
+(function () {
 	'use strict';
 
 	/**
@@ -839,3 +839,5 @@
 		window.FastClick = FastClick;
 	}
 }());
+
+FastClick.attach(document.body);

@@ -27,4 +27,5 @@
 @mixin scroll() {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  -webkit-box-flex:1;
 }
