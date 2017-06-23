@@ -17,7 +17,7 @@
     <a href="javascript" class="action"></a>
   </div>
   <div class="content exam">
-
+  <div class="exam-content">
     <div class="exam-animate">
       <div class="exam-car">
         <img src="images/che1.jpg" alt="">
@@ -37,7 +37,8 @@
           <p>4</p>
           <p>5</p>
           <p>6</p>
-          <p>7</p><p>5</p>
+          <p>7</p>
+          <p>5</p>
           <p>6</p>
           <p>7</p>
           <p>2</p>
@@ -73,32 +74,45 @@
 
     </div>
   </div>
-
+</div>
 </body>
 <script src="js/fastclick.js" type="text/javascript"></script>
 <script src="js/jquery.min.js"></script>
 <script>
+  function start() {
+    var $mark = $(".exam-mark");
+    var examText = document.getElementsByClassName("exam-text-content")[0];
+    var i = 0;
+    var timer = null;
 
-  var examText=document.getElementsByClassName("exam-text-content")[0];
-  var i=0;
-  var timer=setInterval(function(){
-    i++;
-    examText.innerHTML+="<p>模拟数据"+i+"</p>";
+    $mark.addClass("active");
+    timer = setInterval(function() {
+      i++;
+      examText.innerHTML += "<p>模拟数据" + i + "</p>";
 
-    if(i==10){
-      $(".exam-icon li:eq(0) span").addClass('active');
-    }
-    if(i==20){
-      $(".exam-icon li:eq(1) span").addClass('active');
-    }
-    if(i==30){
-      $(".exam-icon li:eq(2) span").addClass('active');
-    }
-    if(i==40){
-      $(".exam-icon li:eq(3) span").addClass('active');
-      clearInterval(timer);
-    }
-  },300)
+      if (i == 10) {
+        $(".exam-icon li:eq(0)").addClass('active');
+      }
+      if (i == 20) {
+        $(".exam-icon li:eq(1)").addClass('active');
+      }
+      if (i == 30) {
+        //体检错误加类名error
+        $(".exam-icon li:eq(2)").addClass('error');
+      }
+      if (i == 40) {
+        $(".exam-icon li:eq(3)").addClass('active');
+        clearInterval(timer);
+        result()
+      }
+    }, 100);
+  }
+
+  function result(){
+    $(".exam-content").addClass("exam-content2")
+  }
+
+  start()
 </script>
 
 </html>
