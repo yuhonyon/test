@@ -1,5 +1,6 @@
 .exam{
   overflow: hidden;
+  background: #f3f3f3;
   img{
     width:100%;
   }
@@ -11,6 +12,7 @@
 .exam-animate{
   overflow: hidden;
   width:100%;
+  height: 50%;
   position: relative;
 }
 .exam-car{
@@ -58,7 +60,6 @@
         min-height: .65rem;
       background: url(../images/sprite.png) no-repeat;
       background-size: $spritesheet-width  $spritesheet-height;
-
     }
     p{
       text-align: center;
@@ -115,15 +116,23 @@
 }
 
 .exam-text{
-  height:3rem;
+  height:calc(100% - 10.7rem);
   overflow: hidden;
   position: relative;
+  margin:.2rem 0;
 }
 .exam-text-content{
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
+  min-height: 100%;
+  padding: .5rem 1rem;
+  font-size: 0.500rem;
+  line-height: .7rem;
+  p:nth-child(1),p:nth-child(2),p:nth-child(3),p:nth-child(4){
+    line-height: 1.2rem;
+  }
 }
 .exam-result{
   position: absolute;
@@ -131,6 +140,27 @@
   width: 100%;
   height: 50%;
   left: 0;
+}
+.exam-info{
+  text-align: center;
+  line-height: 1rem;
+  border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+.exam-list{
+  overflow: hidden;
+  background: #ffffff;
+  li{
+    float: left;
+    width: 50%;
+    height: 3rem;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+
+    &:nth-child(2n){
+      border-right: 0;
+    }
+  }
 }
 .exam-content2 {
   transform: translate3d(0, calc(-50% + 1.5648rem),0);

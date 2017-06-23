@@ -25,6 +25,12 @@ gulp.task('css', function() {
   return gulp.src('./sass/*.scss')
   .pipe($.sourcemaps.init())
   .pipe($.sass().on('error', $.sass.logError))
+  .pipe($.px2rem({
+      rootValue: 72,
+      unitPrecision: 5,
+      replace: true,
+      minPx: 2
+  }))
   .pipe($.autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
