@@ -37,12 +37,105 @@
       @include text-overflow();
       font-size: 0.50rem;
       color: #939393;
+      padding: 1rem 0.2rem;
+    }
+    .chart {
+      position: relative;
+      .details {
+        position: absolute;
+        width: 90%;
+        height: 8rem;
+        left: 5%;
+        top: 0;
+        .list {
+          position: absolute;
+          width: 50%;
+          height: 4rem;
+          z-index: 3;
+          &.list-1 {
+            left: 0;
+            top: 0;
+            strong {
+              left: 1.7rem;
+              top: 1.39rem;
+              transform: rotate(-45deg);
+            }
+          }
+          &.list-2 {
+            right: 0;
+            top: 0;
+            text-align: right;
+            strong {
+              right: 1.7rem;
+              top: 1.39rem;
+              transform: rotate(45deg);
+            }
+
+          }
+          &.list-3 {
+            left: 0;
+            bottom: 0;
+            strong {
+              left: 1.7rem;
+              bottom: 1.39rem;
+              transform: rotate(45deg);
+            }
+          }
+          &.list-4 {
+            right: 0;
+            bottom: 0;
+            text-align: right;
+            strong {
+              right: 1.7rem;
+              bottom: 1.39rem;
+              transform: rotate(-45deg);
+            }
+          }
+          strong {
+            position: absolute;
+            font-size: 0.42rem;
+            text-shadow: 5px 5px 5px #fff;
+            filter:progid:DXImageTransform.Microsoft.Glow(color=#ffffff,Strength=4);
+          }
+          var {
+            color: #939393;
+            font-size: 0.39rem;
+            position: absolute;
+          }
+          span {
+            text-decoration: underline;
+            color: #939393;
+            font-size: 0.47rem;
+          }
+        }
+        .result {
+          position: absolute;
+          left: 0%;
+          width: 100%;
+          text-align: center;
+          height: 1.53rem;
+          top: 50%;
+          margin-top: -0.75rem;
+          z-index: 2;
+          span {
+            font-size: 0.42rem;
+            color: #939393;
+            display:inline-block;
+
+          }
+          var {
+            font-size: 0.81rem;
+            display: inline-block;
+          }
+        }
+      }
     }
     .circle {
       width: 7.85rem;
       height: 7.85rem;
       background: url(../images/circle_bg.png) 0 0 no-repeat;
       background-size: 100%;
+      margin: 0 auto;
       canvas {
         display: block;
         width: 100%;
