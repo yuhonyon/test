@@ -30,13 +30,12 @@
       &:before {
         content: "";
         position: absolute;
-        width: 14px;
-        height: 14px;
+        width: 0.2rem;
+        height: 0.2rem;
         top: 0.3rem;
         left: 0.63rem;
-        margin-left: -6px;
-        margin-top: -6px;
-        border-radius: 7px;
+        transform: translate3d(-50%, -50%, 0);
+        border-radius: 0.1rem;
         border: 2px solid #fff;
         background-color: #eee;
         z-index: 1;
@@ -56,26 +55,24 @@
       &:before {
         content: "";
         position: absolute;
-        width: 14px;
-        height: 14px;
+        width: 0.2rem;
+        height: 0.2rem;
         top: 0.5rem;
         left: 0.63rem;
-        margin-left: -6px;
-        margin-top: -6px;
-        border-radius: 7px;
+        transform: translate3d(-50%, -50% , 0);
+        border-radius: 0.2rem;
         border: 2px solid #fff;
         background-color: #939393;
         z-index: 3;
       }
       .checkable {
         border: 2px solid $borderColor;
-        width: 42px;
-        height: 42px;
-        border-radius: 25px;
+        width: 0.58rem;
+        height: 0.58rem;
+        border-radius: 0.3rem;
         top: 0.5rem;
         left: 0.63rem;
-        margin-left: -20px;
-        margin-top: -20px;
+        transform: translate3d(-50%, -50% , 0);
         position: absolute;
         background-color: #fefefe;
         z-index: 4;
@@ -138,6 +135,16 @@
           background-image: url(../images/path_terrible.png);
         }
       }
+    }
+  }
+  .delete {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid $borderColor;
+    @include button(100%, 1.25rem, #fff, #939393, 0.44rem, 0);
+    &.active {
+      color: #ff5f5f;
     }
   }
 }
