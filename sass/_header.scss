@@ -3,16 +3,28 @@
   left: 0;
   height: $headerHeight;
   line-height: $headerHeight;
+  background-color: $bgColor;
   top: 0;
   width: 100%;
+  border-bottom: 1px solid $borderColor;
   .title {
     text-align: center;
     @include text-overflow();
+    font-size: 0.56rem;
+    font-weight: normal;
+  }
+  .back, .action {
+    position: absolute;
+    left: 0.6rem;
+    width: 0.83rem;
+    height: 0.83rem;
+    top: 50%;
+    margin-top: -0.415rem;
   }
   .back {
-    float: left;
+    left: 0.6rem;
   }
   .action {
-
+    right: 0.6rem;
   }
 }
