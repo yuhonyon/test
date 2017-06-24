@@ -1,0 +1,7 @@
+
+[class^='icon'],[class*=' icon']{
+  background: url(../images/sprite.png) no-repeat;
+  background-size: $spritesheet-width  $spritesheet-height;
+  display: inline-block;
+}
+@include sprites($spritesheet-sprites)
