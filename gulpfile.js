@@ -8,7 +8,7 @@ const spritesmith = require('gulp.spritesmith');
 
 
 
-gulp.task('default', function() {
+gulp.task('default',['sprite'], function() {
     gulp.run(['watch', 'browser-sync', 'css']);
 });
 
@@ -45,7 +45,7 @@ gulp.task('css', function() {
 
 gulp.task('watch', function() {
     gulp.watch('./sass/*.scss', ['css']);
-
+    gulp.watch('./images/icon*.+(jpeg|jpg|png|gif)', ['sprite']);
 });
 
 
