@@ -1,0 +1,112 @@
+.break {
+  .license {
+    text-align: center;
+    color: #010101;
+    font-size: 0.42rem;
+    line-height: 3;
+  }
+  .list {
+    padding: 0 0.38rem 0.42rem;
+  }
+  .item {
+    border: 1px solid $borderColor;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 0.42rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .block {
+      position: relative;
+      padding-left: 0.69rem;
+      border-bottom: 1px solid $borderColor;
+      .blank {
+        position: absolute;
+        width: 0.69rem;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-right: 1px solid $borderColor;
+      }
+    }
+    .block:first-of-type, .block:nth-of-type(3) {
+      .blank:after {
+        content: '';
+        width: 0.3rem;
+        height: 0.3rem;
+        border: 2px solid $borderColor;
+        background-color: #f7f7f7;
+        overflow: hidden;
+        border-radius: 0.2rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -0.15rem;
+        top: 50%;
+        margin-top: -0.15rem;
+      }
+    }
+    .date {
+      font-size: 0.33rem;
+      color: #333;
+      line-height: 0.76rem;
+      vertical-align: middle;
+      padding-left: 0.21rem;
+      i {
+        vertical-align: middle;
+      }
+    }
+    .note {
+      padding: 0.1rem 0.21rem;
+      font-size: 0.42rem;
+      color: #333;
+      line-height: 1.6;
+      span {
+        color: #010101;
+      }
+    }
+    .mark {
+      position: absolute;
+      right: -1px;
+      top: -1px;
+      background-color: $bgColor;
+      i {
+        display: block;
+      }
+    }
+    .punish {
+      padding: 0.4rem 0;
+      &:after {
+        @include clearfix();
+      }
+      .kind {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        text-align: center;
+        &:first-of-type {
+          border-right: 1px solid $borderColor;
+        }
+        .type {
+          font-size: 0.39rem;
+          color: $color;
+        }
+        .number {
+          color: #ff5f5f;
+          font-size: 0.67rem;
+        }
+      }
+    }
+  }
+  .no_break {
+    padding: 2rem 0.5rem 1rem;
+  }
+  .smile {
+    text-align: center;
+  }
+  .already {
+    color: #505050;
+    font-size: 0.44rem;
+    text-align: center;
+    line-height: 2;
+  }
+}
