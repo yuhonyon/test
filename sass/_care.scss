@@ -1,0 +1,32 @@
+.care{
+  img{
+    width:100%;
+  }
+  .logo{
+    width:208px;
+    margin: 80px auto 30px;
+  }
+  .logo-text{
+    text-align: center;
+    font-size: 40px;
+  }
+  .slide-text{
+    color: #939393;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 120px;
+    margin-top: 80px;
+  }
+  .btn{
+    height: 80px;
+    line-height: 80px;
+    width: 580px;
+    margin: 0 auto;
+    background: $c1;
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    border: 0;
+    border-radius: 10px;
+  }
+}

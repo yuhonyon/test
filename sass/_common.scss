@@ -1,0 +1,25 @@
+.footer-btn{
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  left: 0;
+  width:100%;
+  border-top: 1px solid #ddd;
+  >div{
+    float: left;
+    width:50%;
+    font-size: 32px;
+    border-right: 1px solid #ddd;
+    color: #999;
+    background: #ffffff;
+    text-align: center;
+    line-height: 99px;
+    height: 100px;
+    border-top: 1px solid #ddd;
+    &:nth-child(2n){
+      border-right:0;
+    }
+
+  }
+}

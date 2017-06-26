@@ -1,0 +1,119 @@
+.care-remind{
+  padding-bottom: 100px;
+  img{
+    width:100%;
+  }
+  .careR-list{
+    margin-bottom: 20px;
+    border-top: 1px solid #ddd;
+    li{
+      height: 190px;
+      padding: 35px 25px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      div{
+        float: left;
+      }
+      .img{
+        width:165px;
+        height: 125px;
+        overflow: hidden;
+      }
+      .text{
+        width:(720px - 165px - 50px);
+        padding: 0 20px;
+        height: 100%;
+        position: relative;
+        h4{
+          font-size: 36px;
+          margin-bottom: 15px;
+        }
+        p{
+          font-size: 24px;
+          color: #939393;
+          line-height: 36px;
+        }
+        span{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: #ccc;
+          z-index: 2;
+        }
+        img{
+          width:71px;
+          position: absolute;
+          right: 0px;
+          top: -20px;
+        }
+      }
+
+    }
+  }
+
+  .careR-header{
+
+    padding: 40px 25px;
+    .text{
+      h4{
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+      p{
+        font-size: 32px;
+        line-height: 52px;
+        color: #999;
+        b{
+          font-weight: bold;
+          font-size: 40px;
+          color: $c1;
+          &.red{
+            color: #ff5f5f;
+          }
+        }
+      }
+    }
+    .logo{
+      float: left;
+      width:260px;
+      text-align: center;
+      line-height: 170px;
+      overflow: hidden;
+      height: 170px;
+      img{
+        width:165px;
+        vertical-align: middle;
+      }
+    }
+    .btn{
+      overflow: hidden;
+      width:100%;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      text-align: center;
+      button{
+        width: 283px;
+        font-size: 32px;
+        border-radius: 10px;
+        height: 70px;
+        margin-right: 20px;
+        display: inline-block;
+        border: 0;
+        text-align: center;
+        line-height: 70px;
+        color: #fff;
+        background: #a8d324;
+        &:nth-child(2){
+          background: #ffffff;
+          color: $c1;
+          margin-right: 0;
+        }
+        span{
+          position: relative;
+          top: 4px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
