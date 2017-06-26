@@ -5,28 +5,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="format-detection" content="telephone=no">
-  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
   <title>节油专家</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link href="css/index.css" rel="stylesheet">
+  <script src="js/flexible.js" type="text/javascript"></script>
 </head>
 <body>
   <div class="header">
-    <a href="javascript:void(0);" class="back"></a>
-    <h3 class="title">电瓶监控</h3>
-    <a href="javascript" class="action"></a>
+    <a href="javascript:void(0);" class="back icon_back"></a>
+    <h3 class="title">节油专家</h3>
+    <a href="javascript" class="action icon_refresh"></a>
   </div>
   <div class="content oil">
     <div class="analyse">
       <div class="date">
-        <select class="sel" disabled="false">
-          <optgroup label="油耗分析">
+        <div class="sel">
+          <select>
             <option value="">最近7天油耗分析</option>
             <option value="">最近1天油耗分析</option>
             <option value="">油耗汇总分析</option>
-          </optgroup>
-        </select>
+          </select>
+        </div>
         <p class="range">7月5日~7月15日</p>
       </div>
       <ul class="detail">
@@ -58,20 +58,164 @@
         <p class="consume">我的平均油耗</p>
         <p class="number blue">16.2</p>
         <p class="unit">升/百公里</p>
-        <div class="win" style="display:block;"></div>
+        <div class="win icon_win"></div>
       </div>
       <div class="pk_pk">PK</div>
       <div class="other">
         <p class="consume">同车型车主</p>
         <p class="number black">6.2</p>
         <p class="unit">升/百公里</p>
-        <div class="win"></div>
+        <div class="win icon_win"></div>
       </div>
+    </div>
+    <div class="chart">
+      <div id="chart"></div>
     </div>
   </div>
 </body>
 <script src="js/fastclick.js" type="text/javascript"></script>
-<script src="js/flexible.js" type="text/javascript"></script>
+<script src="js/echarts.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+var data1=[22,1,.4,41,21]; //我的
+var data2=[56,.4,1,63,42]; //同城
+function getData(data){
+  var newdata=data.concat();
+  newdata[1]=newdata[1]*50;
+  newdata[2]=newdata[2]*50;
+  return newdata
+}
+
+option = {
+    color: ['#50c0e9','#b1cb62'],
+    legend: {
+            data:['我的水平', '同城车主水平'],
+            top:"12%",
+            textStyle:{
+              color:'#939393',
+              fontSize:lib.flexible.rem2px(.34)
+            }
+        },
+        title:{
+          text:"影响耗油的原因",
+          top:0,
+          left:'center',
+          textStyle:{
+            color:'#939393',
+            fontSize:lib.flexible.rem2px(.4)
+          }
+        },
+    grid: {
+        left: '0%',
+        right: '4%',
+        top:"24%",
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+
+            data : ['怠速\n%', '急踩油门\n次／百公里', '急踩刹车\n次／百公里', '平均车速\n公里/小时', '最佳水温\n％'],
+            axisLabel:{
+              interval:0,
+              textStyle:{
+                fontSize:lib.flexible.rem2px(.3)
+              }
+            },
+            axisTick: {
+               alignWithLabel: true
+           },
+           axisLine:{
+             lineStyle:{
+               color:'#bababa'
+             }
+           },
+            splitLine:{
+              show:true,
+              lineStyle:{
+                color:['#bababa'],
+                type:"dashed"
+              }
+            }
+
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+
+            splitNumber:3,
+            axisTick:{
+              show:false
+            },
+            axisLine:{
+              show:false
+            },
+            axisLabel:{
+              show:false
+            },
+            splitLine:{
+              show:true,
+              lineStyle:{
+                width:2,
+                color:['#bababa'],
+                type:"dashed"
+              }
+            }
+        }
+    ],
+    series : [
+        {
+            name:'我的水平',
+            type:'bar',
+          barGap:0,
+          label:{
+            normal:{
+              formatter:function(param){
+                console.log(param)
+                var data=param.data;
+                if(/次\／百公里/.test(param.name)){
+                  data=data*0.02
+                }
+                return data
+              },
+    show:true,
+    position:'insideTop',
+    textStyle:{
+      color:'#fff',
+      fontSize:lib.flexible.rem2px(.34)
+    }
+            }
+          },
+            data:getData(data1)
+        },
+        {
+            name:'同城车主水平',
+            type:'bar',
+barGap:0,
+label:{
+  normal:{
+    show:true,
+    position:'insideTop',
+    formatter:function(param){
+      console.log(param)
+      var data=param.data;
+      if(/次\／百公里/.test(param.name)){
+        data=data*0.02
+      }
+      return data
+    },
+    textStyle:{
+      color:'#fff',
+      fontSize:lib.flexible.rem2px(.34)
+    }
+  }
+},
+            data:getData(data2)
+        }
+    ]
+};
+var myChart = echarts.init(document.getElementById('chart'));
+myChart.setOption(option);
 </script>
 </html>

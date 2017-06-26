@@ -15,7 +15,6 @@
   }
   .back, .action {
     position: absolute;
-    left: 0.6rem;
     width: 0.83rem;
     height: 0.83rem;
     top: 50%;
@@ -26,5 +25,40 @@
   }
   .action {
     right: 0.6rem;
+  }
+  .cancel {
+    @include button(1.67rem, 0.7rem, $blueColor, #fff, 0.39rem, 0.1rem);
+    position: absolute;
+    top: 50%;
+    margin-top: -0.35rem;
+    right: 0.6rem;
+    display: none;
+  }
+  .dropdown {
+    position: absolute;
+    top: $headerHeight;
+    right: 0.6rem;
+    width: 4.17rem;
+    background-color: #49484b;
+    z-index: 5;
+    display: none;
+    .list {
+      display: block;
+      vertical-align: middle;
+      color: #fff;
+      padding-left: 0.5rem;
+      font-size: 0.44rem;
+      border-bottom: 1px solid $borderColor;
+      &:last-of-type {
+        border-bottom: none;
+      }
+      i {
+        display: inline-block;
+        width: 0.63rem;
+        height: 0.63rem;
+        vertical-align: middle;
+
+      }
+    }
   }
 }

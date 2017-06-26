@@ -1,5 +1,7 @@
 .path_list {
-  padding-top: 0.49rem;
+  .list_wrap{
+    padding-top: 0.49rem;
+  }
   .list {
     position: relative;
     overflow: hidden;
@@ -67,15 +69,19 @@
       }
       .checkable {
         border: 2px solid $borderColor;
-        width: 0.58rem;
-        height: 0.58rem;
-        border-radius: 0.3rem;
+        width: 0.71rem;
+        height: 0.71rem;
+        border-radius: 0.4rem;
         top: 0.5rem;
         left: 0.63rem;
         transform: translate3d(-50%, -50% , 0);
         position: absolute;
         background-color: #fefefe;
         z-index: 4;
+        display: none;
+      }
+      .icon_check {
+        border-color: $blueColor;
       }
       .time {
         font-size: 0.39rem;
@@ -137,14 +143,24 @@
       }
     }
   }
+  .loading {
+    height: 0.8rem;
+    background:url(../images/loading.gif) center 0.1rem no-repeat;
+    background-size: 0.6rem;
+    display: none;
+  }
   .delete {
     position: fixed;
     left: 0;
     bottom: 0;
     border-top: 1px solid $borderColor;
-    @include button(100%, 1.25rem, #fff, #939393, 0.44rem, 0);
+    @include button(100%, 1.25rem, #fff, #939393, 0.44rem, 0.1rem);
+    display: none;
     &.active {
       color: #ff5f5f;
     }
   }
+}
+.path_edit {
+  bottom: 1.53rem;
 }
