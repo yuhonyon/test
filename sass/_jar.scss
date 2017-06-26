@@ -4,15 +4,17 @@
 		padding: 0.69rem 0.28rem;
 		.electric {
 			height: 1.67rem;
-			background-repeat: no-repeat;
-			background-position: 0 0;
-			background-size: 2.19rem 1.65rem;
 			font-size: 0.83rem;
-			width: 2.5rem;
-			margin: 0 auto;
-			padding-left: 2.78rem;
+			text-align: center;
 			line-height: 1.65rem;
 			@include text-overflow();
+			color: #939393;
+			vertical-align: middle;
+			i {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 0.42rem
+			}
 		}
 		.volt {
 			color: #333333;
@@ -28,12 +30,11 @@
 		.updatetime {
 			color: #333;
 			line-height: 1.8;
-			font-size: 0.44rem;
+			font-size: 0.42rem;
 			@include text-overflow();
 		}
 		&.health {
 			.electric {
-				background-image: url(../images/electric_health.png);
 				color: $greenColor;
 			}
 			.volt {
@@ -44,7 +45,6 @@
 		}
 		&.bad {
 			.electric {
-				background-image: url(../images/electric_bad.png);
 				color: $yellowColor;
 			}
 			.volt {
@@ -69,13 +69,13 @@
 			font-size: 0.44rem;
 			line-height: 0.9rem;
 		}
-		.open, .close {
+		.switch {
 			float: right;
-			width: 1.42rem;
-			height: 0.9rem;
-			background-image: url(../images/open_close.png);
-			background-size: 100% 200%;
-			background-repeat: no-repeat;
+			width: 1.39rem;
+			height: 0.92rem;
+			i {
+				display: block;
+			}
 		}
 		.open {
 			background-position: 0 0;

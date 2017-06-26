@@ -1,4 +1,8 @@
 .path_details {
+  .map_container {
+    height: 6.67rem;
+    overflow: hidden;
+  }
   .result {
     text-align: center;
     color: #fff;
@@ -43,9 +47,15 @@
       height: 1.6rem;
       font-size: 0.42rem;
       line-height: 0.6rem;
-      background-size: 1.10rem 0.96rem;
-      background-position: 0.56rem center;
-      background-repeat: no-repeat;
+      position: relative;
+      i {
+        position: absolute;
+        left: 0.56rem;
+        width: 1.1rem;
+        height: 0.96rem;
+        top: 50%;
+        margin-top: -0.48rem;
+      }
       &:nth-of-type(2n-1) {
         border-right: 1px solid $borderColor;
       }
@@ -63,52 +73,8 @@
       p:not(.start, .end) {
         @include text-overflow();
       }
-
-      &.start {
-        background-image: url(../images/start.png);
-      }
-      &.end {
-        background-image: url(../images/end.png);
-      }
-      &.licheng {
-        background-image: url(../images/licheng.png);
-      }
-      &.youhao {
-        background-image: url(../images/youhao.png);
-      }
-      &.chesu {
-        background-image: url(../images/chesu.png);
-      }
-      &.fchesu {
-        background-image: url(../images/fchesu.png);
-      }
-      &.youmen {
-        background-image: url(../images/youmen.png);
-      }
-      &.shache {
-        background-image: url(../images/shache.png);
-      }
-      &.chaosu {
-        background-image: url(../images/chaosu.png);
-      }
-      &.pilao {
-        background-image: url(../images/pilao.png);
-      }
-      &.reche {
-        background-image: url(../images/reche.png);
-      }
-      &.jingyan {
-        background-image: url(../images/jingyan.png);
-      }
-      &.youpin {
-        background-image: url(../images/youpin.png);
-      }
-      &.youfei {
-        background-image: url(../images/youfei.png);
-      }
       &.cpai {
         line-height: 1.2rem;
-        background-image: url(../images/cpai.png);
       }
     }
   }
