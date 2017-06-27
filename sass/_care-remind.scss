@@ -1,7 +1,13 @@
 .care-remind{
-  padding-bottom: 100px;
+  bottom: $footerHeight + 0.28rem;
   img{
     width:100%;
+  }
+  .loading {
+    height: 0.8rem;
+    background:url(../images/loading.gif) center 0.1rem no-repeat;
+    background-size: 0.6rem;
+    display: none;
   }
   .careR-list{
     margin-bottom: 20px;
@@ -11,34 +17,32 @@
       padding: 35px 25px;
       background: #fff;
       border-bottom: 1px solid #ddd;
-      div{
+      .pic {
         float: left;
-      }
-      .img{
-        width:165px;
-        height: 125px;
-        overflow: hidden;
+        margin-right: 30px;
+        img {
+          display: block;
+          width: 2.26rem;
+          height: 1.72rem;
+        }
       }
       .text{
-        width:(720px - 165px - 50px);
         padding: 0 20px;
         height: 100%;
         position: relative;
         h4{
           font-size: 36px;
           margin-bottom: 15px;
+          @include text-overflow();
         }
         p{
           font-size: 24px;
           color: #939393;
           line-height: 36px;
+          word-break: break-all;
         }
         span{
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          color: #ccc;
-          z-index: 2;
+          float: right;
         }
         img{
           width:71px;
@@ -52,7 +56,6 @@
   }
 
   .careR-header{
-
     padding: 40px 25px;
     .text{
       h4{
@@ -86,34 +89,46 @@
       }
     }
     .btn{
-      overflow: hidden;
-      width:100%;
       margin-top: 50px;
       margin-bottom: 10px;
-      text-align: center;
-      button{
-        width: 283px;
-        font-size: 32px;
-        border-radius: 10px;
-        height: 70px;
-        margin-right: 20px;
-        display: inline-block;
-        border: 0;
-        text-align: center;
-        line-height: 70px;
-        color: #fff;
-        background: #a8d324;
-        &:nth-child(2){
-          background: #ffffff;
-          color: $c1;
-          margin-right: 0;
+      padding: 0 0.83rem;
+      &:after {
+        @include clearfix();
+      }
+      a{
+        float: left;
+        vertical-align: middle;
+        @include button(48%, 0.97rem, $greenColor, #fff, 0.44rem, 0.14rem);
+        &:last-of-type{
+          background-color: #ffffff;
+          color: $blueColor;
+          margin-left: 4%;
         }
-        span{
-          position: relative;
-          top: 4px;
-          margin-right: 10px;
+        i{
+          vertical-align: middle;
+          margin-right: 0.14rem;
         }
       }
+    }
+  }
+}
+.care-footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid $borderColor;
+  background-color: #fff;
+  &:after {
+    @include clearfix();
+  }
+  a {
+    // $width, $height, $bgColor, $color, $fontSize, $borderRadius
+    float: left;
+    box-sizing: border-box;
+    @include button(50%, $footerHeight, #fff, $color, 0.39rem, 0);
+    &:first-of-type {
+      border-right: 1px solid $borderColor;
     }
   }
 }

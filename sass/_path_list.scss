@@ -149,19 +149,19 @@
     background-size: 0.6rem;
     display: none;
   }
-  .delete {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    border-top: 1px solid $borderColor;
-    z-index: 5;
-    @include button(100%, 1.25rem, #fff, #939393, 0.44rem, 0.1rem);
-    display: none;
-    &.active {
-      color: #ff5f5f;
-    }
-  }
 }
 .path_edit {
   bottom: 1.53rem;
+}
+.delete {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid $borderColor;
+  z-index: 5;
+  @include button(100%, 1.25rem, #fff, #939393, 0.44rem, 0.1rem);
+  display: none;
+  &.active {
+    color: #ff5f5f;
+  }
 }

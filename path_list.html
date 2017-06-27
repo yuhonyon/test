@@ -9,7 +9,6 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link href="css/index.css" rel="stylesheet">
-
   <script src="js/flexible.js" type="text/javascript"></script>
 </head>
 <body>
@@ -181,8 +180,8 @@
         </div>
       </div>
       <div class="loading"></div>
-    <a class="delete" href="javascript:void(0);">删除(<span>0</span>)</a>
   </div>
+  <div class="delete">删除(<span>0</span>)</div>
 </body>
 <script src="js/fastclick.js" type="text/javascript"></script>
 <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -196,7 +195,7 @@ $(document).click(function(){
 })
 $(".dropdown .edit").click(function(e){
   $(".path_list .checkable").show();
-  $(".path_list .delete").show();
+  $(".delete").show();
   $(".cancel").show();
   $(".action_list").hide();
   $(".path_list").addClass("path_edit");
@@ -206,8 +205,8 @@ $(".cancel").click(function(){
   countChecked = 0;
   $(".path_list").removeClass("path_edit");
   $(".path_list .checkable").hide().removeClass("icon_check");
-  $(".path_list .delete").hide().removeClass("active");
-  $(".path_list .delete span").html(countChecked);
+  $(".delete").hide().removeClass("active");
+  $(".delete span").html(countChecked);
   $(".cancel").hide();
   $(".action_list").show();
 })
@@ -233,8 +232,6 @@ var height = $(".path_list").height();
 var request = true;
 $(".path_list").scroll(function(){
   var scrollTop = $(this).scrollTop();
-  totalHeight = $(".list_wrap").outerHeight();
-  height = $(".path_list").height();
   if ((scrollTop + height) >= (totalHeight - 2)) {
     if (!request) return;
     $(".loading").show();
