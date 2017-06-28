@@ -22,7 +22,12 @@
     </div>
     <p class="logo-text"> 马自达-阿特兹-2.0L </p>
     <div class="slide">
+        <div class="slide-bg">
+          <div class="slide-btn">
 
+          </div>
+          <div class="slide-info">7500</div>
+        </div>
     </div>
     <p class="slide-text">请拖动选择该车型的保养间隔里程</p>
     <button class="btn">保存</button>
@@ -33,7 +38,38 @@
 <script src="js/fastclick.js" type="text/javascript"></script>
 <script src="js/jquery.min.js"></script>
 <script>
+var slideW=$(".slide-bg").width();
 
-</script>
+ $(".slide-bg").on('click',function(e){
 
+   var s = (e.clientX-lib.flexible.rem2px(1.1528))/(slideW-lib.flexible.rem2px(.5278)*2)*11250+1875;
+
+
+   slide(s)
+ });
+
+ $(".slide-bg").on('touchmove',function(e){
+
+   var s = (e.originalEvent.touches[0].clientX-lib.flexible.rem2px(1.1528))/(slideW-lib.flexible.rem2px(.5278)*2)*11250+1875;
+   slide(s)
+
+ })
+
+ function slide(x){
+    console.log(x)
+   x=Math.round(x/100)*100;
+   if(x>12500){
+     x=12500;
+   }
+   if(x<2500){
+     x=2500;
+   }
+   var l=(x-1875)/11250*(slideW-lib.flexible.rem2px(.5278)*2);
+   $(".slide-btn").css('left',l+lib.flexible.rem2px(.1));
+   $(".slide-info").css('left',l-lib.flexible.rem2px(.46));
+   $(".slide-info").text(x);
+ }
+
+ slide(7500)
+</script>7
 </html>

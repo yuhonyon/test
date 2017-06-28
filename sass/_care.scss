@@ -29,4 +29,51 @@
     border: 0;
     border-radius: 10px;
   }
+  .slide{
+    width:10rem;
+    margin-top: 2rem;
+    position: relative;
+  }
+  .slide-bg{
+    width:630px;
+    margin-left: 45px;
+    height: 125px;
+    background: url(../images/slide.png) 0 30px no-repeat;
+    background-size: 100%;
+    position: relative;
+    padding-top: 30px;
+  }
+  .slide-btn{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url(../images/slide-btn.png) 0 0 no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left:0;
+
+    top: 0px;
+  }
+  .slide-info{
+    width: 140px;
+    height: 44px;
+    background: $c1;
+    color: #fff;
+    font-size: .4rem;
+    text-align: center;
+    line-height: 44px;
+    position: absolute;
+    top: -60px;
+    border-radius: 10px;
+    &:after{
+      top: 100%;
+      left: 50%;
+      content: "";
+      width:2px;
+      position: absolute;
+      background: $c1;
+      height: 50px;
+    }
+  }
 }
