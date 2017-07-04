@@ -1,0 +1,50 @@
+
+.search-brand {
+  .brand {
+    .one {
+      font-size: 0.44rem;
+      color: #666;
+      background-color: #fff;
+      padding: 0.3rem 0.42rem;
+      line-height: 0.6rem;
+      display: block;
+      border-bottom: 1px solid $borderColor;
+      @include text-overflow();
+    }
+  }
+  .not-found {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 3.33rem;
+    }
+  }
+  &-header {
+    padding: 0.28rem 3.8rem 0.28rem 0.42rem;
+    .ipt {
+      font-size: 0.42rem;
+      color: #383838;
+      border: 0;
+      border-bottom: 1px solid $borderColor;
+      width: 100%;
+      padding: 0;
+      background-color: $bgColor;
+      display: block;
+      line-height: 0.83rem;
+      float: left;
+    }
+    .btn {
+      height: 0.83rem;
+      line-height: 0.83rem;
+      width: 1.5rem;
+      &:first-of-type {
+        right: 0.28rem;
+      }
+      &:last-of-type {
+        right: 2rem;
+      }
+    }
+  }
+}

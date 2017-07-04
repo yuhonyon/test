@@ -1,0 +1,93 @@
+.brand-settings {
+  .hot {
+    .title {
+      background-color: #fff;
+      font-size: 0.50rem;
+      color: #898989;
+      line-height: 0.56rem;
+      padding: 0.42rem;
+      border-bottom: 1px solid $borderColor;
+      @include text-overflow();
+    }
+    .kind {
+      padding: 0.42rem;
+      border-bottom: 1px solid $borderColor;
+      &:after {
+        @include clearfix();
+      }
+      .one {
+        float: left;
+        width: 20%;
+        margin-bottom: 0.42rem;
+        .logo {
+          text-align: center;
+          height: 1.3rem;
+          position: relative;
+          img {
+            width: 1.3rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+          }
+        }
+        .name {
+          font-size: 0.39rem;
+          color: #939393;
+          text-align: center;
+          line-height: 0.6rem;
+          @include text-overflow();
+        }
+      }
+    }
+  }
+  .letter {
+    .title {
+      font-size: 0.50rem;
+      color: #898989;
+      line-height: 1.11rem;
+      padding: 0 0.42rem;
+      @include text-overflow();
+      background-color: #fff;
+      border-bottom: 1px solid $borderColor;
+    }
+    .letter-one {
+      border-bottom: 1px solid $borderColor;
+      .one {
+        padding-left: 0.42rem;
+        display: block;
+        // border-bottom: 1px solid $borderColor;
+        &:last-of-type {
+          .details {
+            border-bottom: 0;
+          }
+        }
+        .details {
+          border-bottom: 1px solid $borderColor;
+          padding: 0.2rem 0.2rem 0.2rem 1.53rem;
+          position: relative;
+
+          .logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 1.25rem;
+            width: 1.53rem;
+            img {
+              width: 0.90rem;
+              left: 50%;
+              top: 50%;
+              transform: translate3d(-50%, -50%, 0);
+              position: absolute;
+            }
+          }
+          .name {
+            font-size: 0.50rem;
+            color: #898989;
+            line-height: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+}
