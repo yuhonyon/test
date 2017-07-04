@@ -11,6 +11,12 @@
         &:after {
           @include clearfix();
         }
+        &.noBottom {
+          border-bottom: 0;
+        }
+        &:first-of-type {
+
+        }
         .type, .opening {
           font-size: 0.44rem;
           color: #666;
@@ -25,6 +31,33 @@
         .opening {
           margin-right: 0.28rem;
           display: none;
+        }
+      }
+      .item-details {
+        background-color: #fff;
+        padding-left: 0.25rem;
+        border-bottom: 1px solid $borderColor;
+        .link {
+          display: block;
+          padding: 0.25rem 0.25rem 0.25rem 0;
+          line-height: 0.9rem;
+          font-size: 0.44rem;
+          color: #666;
+          border-top: 1px solid $borderColor;
+          vertical-align: middle;
+          &:after {
+            @include clearfix();
+          }
+          .type {
+            float: left;
+          }
+          .value, i {
+            float: right;
+          }
+          i {
+            margin-left: 0.3rem;
+            margin-top: 0.25rem;
+          }
         }
       }
       .note {

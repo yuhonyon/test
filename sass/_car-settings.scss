@@ -1,0 +1,45 @@
+.car-settings {
+  padding: 0.5rem 0;
+  .list {
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    background-color: #fff;
+    .link {
+      padding-left: 0.4rem;
+      display: block;
+      line-height: 0.9rem;
+      .details {
+        border-bottom: 1px solid $borderColor;
+        padding: 0.3rem 0.4rem 0.3rem 0;
+        &:after {
+          @include clearfix();
+        }
+        .type {
+          float: left;
+          font-size: 0.44rem;
+          color: #666;
+          font-weight: normal;
+        }
+        .value, i {
+          float: right;
+          font-weight: normal;
+        }
+        .value {
+          font-size: 0.44rem;
+          color: #898989;
+          max-width: 5.69rem;
+          @include text-overflow();
+        }
+        i {
+          margin-top: 0.3rem;
+          margin-left: 0.3rem;
+        }
+      }
+      &:last-of-type {
+        .details {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

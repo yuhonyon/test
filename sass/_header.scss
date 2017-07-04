@@ -26,12 +26,14 @@
   .action {
     right: 0.6rem;
   }
-  .cancel {
+  .cancel, .save {
     @include button(1.67rem, 0.7rem, $blueColor, #fff, 0.39rem, 0.1rem);
     position: absolute;
     top: 50%;
     margin-top: -0.35rem;
     right: 0.6rem;
+  }
+  .cancel {
     display: none;
   }
   .dropdown {

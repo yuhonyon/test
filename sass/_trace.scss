@@ -59,7 +59,7 @@
     }
     a {
       // $width, $height, $bgColor, $color, $fontSize, $borderRadius
-      @include button(47%, 1.11rem, $bgColor, $color, 0.50rem, 0.2rem);
+      @include button(47%, $buttonHeight, $bgColor, $color, 0.50rem, $buttonRadius);
       float: left;
       border: 1px solid $borderColor;
       box-sizing: border-box;

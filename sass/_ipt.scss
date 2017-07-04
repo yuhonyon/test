@@ -1,0 +1,26 @@
+.ipt {
+  padding: 0.8rem 0;
+  background-color: #efefef;
+  &-text {
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    input {
+      background-color: #fff;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.3rem;
+      font-size: 0.36rem;
+      color: #000;
+      border: 0;
+    }
+  }
+  .remove {
+    padding: 0.8rem;
+    a {
+      // $width, $height, $bgColor, $color, $fontSize, $borderRadius
+      @include button(100%, $buttonHeight, $blueColor, #fff, $buttonSize, $buttonRadius);
+
+    }
+  }
+}
